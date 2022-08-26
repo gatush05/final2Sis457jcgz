@@ -1,0 +1,52 @@
+﻿@model Web.Models.Usuario
+
+@{
+    ViewData["Title"] = "Eliminar Usuairo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-xxl py-5">
+	<div class="container">
+
+<h1>ELIMINAR USUARIO</h1>
+
+<h3>esta seguro de eliminar?</h3>
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Usuario1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Usuario1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Clave)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Clave)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Rol)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Rol)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RegistroActivo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RegistroActivo)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="=btn btn-primary">
+                    <i class="fas fa-trash-alt"></i> Eliminar
+                    </button>
+        <a asp-action="Index">Volver a la lista</a>
+    </form>
+</div>
+</div>
+</div>
